@@ -1,14 +1,10 @@
 /* main */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Italiana&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Italiana&display=swap");
 :root {
   --font-size-h1: clamp(3.5rem, 12vw + 1rem, 8rem);
   --font-size-h2: 1.9em;
-  --bg-color-one: #EEEDED; 
-  --border-left-color: #FFB002; 
+  --bg-color-one: #EEEDED;
+  --border-left-color: #FFB002;
   --bg-color-two: #242D34;
   --bg-color-three: #FFB002;
   --bg-color-four: #404678;
@@ -25,7 +21,7 @@
   opacity: 0;
   text-decoration: none;
   color: var(--bg-color-one);
-  font-family: "Cinzel"; 
+  font-family: "Cinzel";
 }
 
 .skip-link:focus {
@@ -35,7 +31,7 @@
   background-color: var(--bg-color-four);
 }
 
-header .link-github  {
+header .link-github {
   display: block;
   text-align: center;
   background-color: var(--bg-color-three);
@@ -43,17 +39,15 @@ header .link-github  {
   border-radius: 30px;
   margin-top: 30px;
   color: var(--bg-color-two);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, .7);
-
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
-
-header  {
-    display: grid;
-    background-image: url("../img/background.jpg");
-    background-size: cover;
-    min-height: 40vh;
-    background-repeat: no-repeat; 
+header {
+  display: grid;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  min-height: 40vh;
+  background-repeat: no-repeat;
 }
 
 header .container {
@@ -61,7 +55,7 @@ header .container {
   margin: 3em auto;
   padding: 2.5rem;
   background-color: var(--bg-color-one);
-  border-left: .5em solid var(--border-left-color);
+  border-left: 0.5em solid var(--border-left-color);
   border-radius: 1em;
 }
 
@@ -74,19 +68,15 @@ body {
   color: var(--bg-color-two);
 }
 
- .link-github svg {
+.link-github svg {
   width: 1em;
   transition: transform 1.5s ease-in-out;
   color: var(--bg-color-two);
-  
 }
 
- .link-github svg:hover {
+.link-github svg:hover {
   transform: rotate(360deg);
 }
-
-
-
 
 .container {
   max-width: 80ch;
@@ -102,16 +92,13 @@ header h1 {
   letter-spacing: 20px;
   font-weight: bolder;
   color: var(--bg-color-two);
-  
 }
-
 
 nav {
   display: block;
-  background: linear-gradient(30deg, var(--bg-color-four), var(--bg-color-two) );
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, .7);
+  background: linear-gradient(30deg, var(--bg-color-four), var(--bg-color-two));
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
-
 
 header h2 {
   font-size: var(--font-size-h2);
@@ -120,11 +107,10 @@ header h2 {
   color: var(--bg-color-two);
 }
 
-
 h3 {
   font-size: var(--font-size-h3);
   font-family: "Italiana";
-  color: var((--bg-color-two));
+  color: var(--bg-color-two);
 }
 
 h4 {
@@ -142,39 +128,37 @@ nav ul {
   list-style: none;
 }
 
- li {
+li {
   display: list-item;
 }
 
 nav ul a {
   display: inline-grid;
-    padding: 0.5rem;
-    letter-spacing: 2.5px;
-    color: var(--bg-color-one);
-    font-size: 1em;
-    text-decoration: none;
-    position: relative;
-    margin-left: 30px;
-    margin-right: 30px;
+  padding: 0.5rem;
+  letter-spacing: 2.5px;
+  color: var(--bg-color-one);
+  font-size: 1em;
+  text-decoration: none;
+  position: relative;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 nav ul a::after {
   width: 100%;
   height: 3px;
   opacity: 0;
-  content: '';
+  content: "";
   position: absolute;
-  bottom: .80px;
-  transition: all 300ms  ease-in-out 0s;
+  bottom: 0.8px;
+  transition: all 300ms ease-in-out 0s;
 }
 
 nav ul li:hover a:after {
   background-color: var(--bg-color-one);
-  border-bottom: .5px solid var(--bg-color-one);
+  border-bottom: 0.5px solid var(--bg-color-one);
   opacity: 3;
 }
-
-
 
 :is(h1, h2, h3) {
   line-height: 1.2;
@@ -197,12 +181,12 @@ header p {
   list-style-position: inside;
 }
 
-#about, #guidelines, #contribute, #files  {
-  color: var(--bg-color-two); 
+#about, #guidelines, #contribute, #files {
+  color: var(--bg-color-two);
 }
 
 #main h2, h3, h4 {
-  border-left: .2em solid var(--bg-color-four);
+  border-left: 0.2em solid var(--bg-color-four);
   padding-left: 15px;
   letter-spacing: 3px;
 }
