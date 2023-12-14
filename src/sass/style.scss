@@ -206,3 +206,10 @@ header p {
   padding-left: 15px;
   letter-spacing: 3px;
 }
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1440px;
+  margin: 0 auto;
+}
