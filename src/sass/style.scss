@@ -68,7 +68,7 @@ header .container {
 body {
   margin: 0;
   line-height: 2;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Cinzel";
   background-color: var(--bg-color-one);
   color: var(--bg-color-two);
@@ -208,8 +208,21 @@ header p {
 }
 
 #about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1440px;
-  margin: 0 auto;
+  display: block;
+}
+
+#about > * {
+  padding: 1rem;
+}
+
+p {
+  margin:  0 0 2rem;
+}
+
+@media (min-width: 768px) {
+  #about {
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3rem;
+  }
 }
