@@ -2,7 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Italiana&display=swap');
 
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   --font-size-h1: clamp(3.5rem, 12vw + 1rem, 8rem);
@@ -207,22 +211,28 @@ header p {
   letter-spacing: 3px;
 }
 
-#about {
+#main {
   display: block;
 }
 
-#about > * {
+article, #styles {
   padding: 1rem;
 }
-
-p {
-  margin:  0 0 2rem;
+#about, #guidelines, #contribute .container, #files .container, aside.profile, #styles .container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+
+
+p {
+  margin:  0 0 1rem;
+}
+
+@media (min-width: 1100px) {
   #about {
     display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 6rem;
   }
 }
