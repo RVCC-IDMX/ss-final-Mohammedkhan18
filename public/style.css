@@ -85,7 +85,6 @@ body {
 }
 
 .container {
-  max-width: 80ch;
   margin: 8vh auto;
   overflow: hidden;
   padding-left: 20px;
@@ -103,7 +102,7 @@ header h1 {
 nav {
   display: block;
   background: linear-gradient(30deg, var(--bg-color-four), var(--bg-color-two));
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
 }
 
 header h2 {
@@ -210,8 +209,33 @@ article, #styles {
   margin: 0 auto;
 }
 
-p {
-  margin: 0 0 1rem;
+p, li {
+  max-width: 80ch;
+}
+
+blockquote {
+  background: linear-gradient(30deg, var(--bg-color-four), var(--bg-color-two));
+  color: var(--bg-color-one);
+  padding: 1em;
+  place-items: center;
+  margin: 2em 0;
+  position: relative;
+  display: block;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
+
+blockquote p {
+  position: relative;
+  margin-bottom: 0;
+  padding: 0.5em;
+}
+
+blockquote > * {
+  grid-area: blockquote;
+}
+
+blockquote a {
+  color: var(--bg-color-one);
 }
 
 @media (min-width: 1100px) {
