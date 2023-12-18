@@ -79,11 +79,11 @@ body {
 
 .link-github svg {
   width: 1em;
-  transition: transform 1.5s ease-in-out;
+  transition: transform 0.5s ease-in;
 }
 
 .link-github svg:hover {
-  transform: rotate(360deg);
+  transform: rotate(90deg);
   color: var(--bg-color-one);
 }
 
@@ -289,6 +289,23 @@ blockquote strong {
   box-shadow: 0px 0px 8px var(--bg-color-two);
 }
 
+a {
+  color: var(--bg-color-two);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 @media (min-width: 1100px) {
   #about {
     display: grid;
