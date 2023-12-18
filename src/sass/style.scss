@@ -79,7 +79,6 @@ body {
   background-color: var(--bg-color-one);
   color: var(--bg-color-two);
   font-size: 100%;
-  overflow-x: hidden;
 }
 
  .link-github svg {
@@ -100,7 +99,6 @@ body {
 
 .container {
   margin: 8vh auto;
-  overflow: hidden;
   padding-left: 20px;
   padding-right: 15px;
 }
@@ -307,7 +305,21 @@ a {
 }
 
 .link-guidelines {
-  
+  background: linear-gradient(30deg, var(--bg-color-four), var(--bg-color-two));
+  color: var(--bg-color-one);
+  box-shadow: 0px 0px 8px var(--bg-color-two);
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+  font-size: var(--font-size-blockquote-p);
+}
+
+.link-guidelines:hover {
+  border: 4px solid var(--bg-color-two);
+  background: var(--bg-color-one);
+  color: var(--bg-color-two);
+  transition: all 300ms ease-out;
+  border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: reduce) {
