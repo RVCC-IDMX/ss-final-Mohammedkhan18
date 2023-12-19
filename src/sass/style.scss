@@ -43,6 +43,7 @@
 
 header .link-github  {
   display: block;
+  border: 4px solid transparent;
   text-align: center;
   background-color: var(--bg-color-three);
   text-decoration: none;
@@ -55,7 +56,7 @@ header .link-github  {
   border: 4px solid var(--bg-color-two);
   background: var(--bg-color-one);
   color: var(--bg-color-two);
-  transition: all 300ms ease-out;
+  transition: all 300ms ease-in-out;
   border-radius: 30px;
 }
 
@@ -89,12 +90,6 @@ body {
 
  .link-github svg {
   width: 1em;
-  transition: transform 0.5s ease-in;
-}
-
- .link-github svg:hover {
-  transform: rotate(90deg);
-  color: var(--bg-color-one);
 }
 
 .link-github svg:not(:root) {
@@ -326,6 +321,10 @@ a {
   color: var(--bg-color-two);
   transition: all 300ms ease-out;
   border-radius: 10px;
+}
+
+#contribute  ol {
+  display: grid;
 }
 
 @media (prefers-reduced-motion: reduce) {
