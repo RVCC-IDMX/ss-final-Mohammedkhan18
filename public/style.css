@@ -14,11 +14,13 @@
   --bg-color-two: #242D34;
   --bg-color-three: #FFB002;
   --bg-color-four: #404678;
+  --bg-color-four-faded: rgba(64,70,120, 0.8);
   --paragraph-font-size: 1rem;
   --font-size-blockquote-p: 0.9rem;
   --font-size-h3: 2rem;
   --font-size-h4: 1.50rem;
   --font-size-strong: 0.9rem;
+  --font-size-files: 0.8rem;
 }
 
 .skip-link {
@@ -222,6 +224,10 @@ article, #styles {
   margin: 0 auto;
 }
 
+article .container {
+  width: 100%;
+}
+
 p, li {
   max-width: 80ch;
 }
@@ -312,23 +318,28 @@ a {
   border-radius: 10px;
 }
 
+#contribute .container {
+  padding-bottom: 1.7em;
+}
+
 #contribute section ol {
   display: flex;
   align-items: flex-start;
   padding-left: 0;
   position: relative;
+  counter-reset: section;
 }
 
 #contribute section ol::before {
-  width: 300%;
+  min-width: 171.5%;
   height: 2.5px;
   background-color: var(--bg-color-four);
   position: absolute;
-  top: 2.5em;
+  top: 3.5em;
   z-index: 0;
   content: "";
   left: -50em;
-  list-style-type: decimal;
+  list-style: decimal;
 }
 
 #contribute section li::before {
@@ -347,15 +358,12 @@ a {
   justify-content: center;
 }
 
-#contribute section ol li {
-  margin: 1em;
-}
-
 #contribute section li {
   display: block;
   flex: 1;
   z-index: 1;
   padding: 1em;
+  margin: 1em;
 }
 
 #files {
@@ -385,23 +393,185 @@ a {
   margin-right: 1em;
 }
 
+#files a {
+  color: var(--bg-color-one);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: var(--font-size-files);
+}
+
+.link-downloadcss {
+  background-color: transparent;
+  background-image: url("../img/HTML File Icon.svg");
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: 0.5em center;
+  padding-left: 2em;
+}
+
+.link-downloadhtml {
+  background-color: transparent;
+  background-image: url("../img/HTML File Icon.svg");
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: 0.5em center;
+  padding-left: 2em;
+}
+
+.link-codepen {
+  background-color: transparent;
+  background-image: url("../img/Link icon.svg");
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: 0.5em center;
+  padding-left: 2em;
+}
+
+.profile ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile ul li {
+  display: flex;
+  padding: 0 1em;
+}
+
+.profile .profile-author {
+  border-right: 2px solid var(--bg-color-four);
+}
+
+.profile .profile-title {
+  padding-left: 0px;
+  border-right: 2px solid var(--bg-color-four);
+}
+
+.profile ul li span:nth-child(1) {
+  width: auto;
+  margin-right: 0.5em;
+}
+
+.profile .profile-twitter {
+  border-right: 2px solid var(--bg-color-four);
+}
+
+.profile .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1em 4em;
+}
+
+.profile .container > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75em;
+  transform: translate(0, 0);
+  text-align: center;
+  text-decoration: none;
+  min-height: 2em;
+  border: 2px solid var(--bg-color-four);
+}
+
+.profile .container > a:hover {
+  background-color: var(--bg-color-four);
+  color: var(--bg-color-one);
+  transition: 300ms all ease-in-out;
+}
+
+.profile h4 {
+  margin: 0 0 0.5em 0;
+  color: var(--bg-color-two);
+  text-align: left;
+  border-left: 4px solid var(--bg-color-four);
+  font-size: var(--font-size-h3);
+  padding: 0.25em 0.5em;
+  width: 100%;
+  margin-left: 20px;
+}
+
+#styles {
+  margin: 5vh 0 10vh;
+  text-align: center;
+}
+
+article, #styles {
+  padding: 1rem;
+}
+
+aside {
+  display: block;
+}
+
+.features li > span a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border: 1em solid var(--bg-color-one);
+}
+
+.features li > span a {
+  color: inherit;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.features li > span {
+  display: grid;
+  place-content: center;
+  grid-gap: 0.5rem;
+  background-color: var(--bg-color-four-faded);
+  line-height: 1.1;
+  transition: 300ms all ease-in-out;
+  margin: 1.5em;
+}
+
+.features li > span:hover {
+  background-color: var(--bg-color-four);
+  transition: 300ms all ease-in-out;
+}
+
+.features li {
+  display: grid;
+  position: relative;
+  place-content: stretch;
+  min-height: 12rem;
+  padding: 1rem;
+  color: var(--bg-color-one);
+  text-align: center;
+}
+
+.features {
+  position: relative;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-footer ul, .features {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-gap: 0em;
+  list-style: none;
+}
+
 footer {
   display: block;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 @media (min-width: 1100px) {
   #about {
     display: grid;
@@ -425,5 +595,57 @@ footer {
     top: 2em;
     left: 0;
     z-index: -1;
+  }
+  #contribute section ol::before {
+    width: 0;
+    height: 0;
+  }
+  #contribute {
+    margin-left: -1rem;
+  }
+  .profile .container > a {
+    margin-left: 0;
+    width: 100%;
+  }
+  #styles {
+    padding: 2rem;
+    margin: 5vh 0 5vh;
+  }
+  .features li > span a::before {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0.5em solid var(--bg-color-one);
+    border-bottom: 0.5em solid var(--bg-color-one);
+  }
+  .features li > span {
+    margin: 2em;
+    margin-left: 0.2em;
+  }
+}
+@media (max-width: 1010px) {
+  #files .container {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .aside.profile {
+    margin: 1rem 2rem;
+    padding: 0;
+  }
+  .profile .container {
+    padding: 1em 0;
+  }
+  .profile ul {
+    flex-direction: column;
+  }
+  .profile ul li {
+    padding: 0;
+    margin-left: 20px;
+  }
+  .profile .profile-title, .profile .profile-author, .profile .profile-twitter {
+    border-right: none;
+    border-left: none;
+  }
+  .profile .container > a {
+    margin-left: auto;
   }
 }
